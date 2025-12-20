@@ -1,26 +1,22 @@
-import React from "react";
-import Display from "./Display";
-import ButtonPanel from "./ButtonPanel";
+import { useState } from "tagu-tagu";
 import calculate from "../logic/calculate";
+import ButtonPanel from "./ButtonPanel";
+import Display from "./Display";
 import "./App.css";
 
-export default class App extends React.Component {
-  state = {
-    total: null,
-    next: null,
-    operation: null,
-  };
+export default function App() {
+	const state = useState({
+		total: null,
+		next: null,
+		operation: null,
+	});
 
-  handleClick = buttonName => {
-    this.setState(calculate(this.state, buttonName));
-  };
+	const handleClick = (buttonName) => {
+		state.set(calculate(state.get(), buttonName));
+	};
 
-  render() {
-    return (
-      <div className="component-app">
-        <Display value={this.state.next || this.state.total || "0"} />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </div>
-    );
-  }
+	return div({ attr: { class: "component-app" } }, [
+		Display({ value: state.next || state.total || "0" }),
+		ButtonPanel({ clickHandler: handleClick }),
+	]);
 }
