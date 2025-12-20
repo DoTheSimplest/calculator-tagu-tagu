@@ -16,13 +16,13 @@ export default function App() {
 		state.set(Object.assign(state.get(), delta));
 	};
 
-	return div({ attr: { class: "component-app" } }, [
+	return div({ attr: { class: "component-app" }, data: { handleClick } }, [
 		Display({
 			value: FromStates(
 				[state],
 				() => state.get().next ?? state.get().total ?? "0",
 			),
 		}),
-		ButtonPanel({ clickHandler: handleClick }),
+		ButtonPanel(),
 	]);
 }
