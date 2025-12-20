@@ -10,7 +10,9 @@
 		"vite": "^7.3.0",
 		"vitest": "^4.0.16"
 	},
-	"scripts": {},
+	"scripts": {
+		"start": "vite"
+	},
 	"dependencies": {
 		"big.js": "^7.0.1",
 		"tagu-tagu": "^2.1.1"
