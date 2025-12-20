@@ -4,6 +4,7 @@
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "2.3.10",
+    "@types/big.js": "^6.2.2",
     "vitest": "^4.0.16"
   },
   "scripts": {},
