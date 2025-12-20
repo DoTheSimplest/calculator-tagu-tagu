@@ -3,9 +3,10 @@ import calculate from "./calculate";
 
 function pressButtons(buttons) {
 	const value = {};
-	buttons.forEach((button) => {
+	for (const button of buttons) {
 		Object.assign(value, calculate(value, button));
-	});
+	}
+
 	// no need to distinguish between null and undefined values
 	Object.keys(value).forEach((key) => {
 		if (value[key] === null) {
