@@ -3,8 +3,8 @@ import "./Button.css";
 
 export default function Button(props: {
 	name: string;
-	orange: boolean;
-	wide: boolean;
+	orange?: boolean;
+	wide?: boolean;
 	clickHandler: (name: string) => void;
 }) {
 	const handleClick = () => {
