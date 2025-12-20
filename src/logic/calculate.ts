@@ -2,6 +2,12 @@ import Big from "big.js";
 import isNumber from "./isNumber";
 import operate from "./operate";
 
+export type Calculator = {
+	next?: string | null;
+	operation?: string | null;
+	total?: string | null;
+};
+
 /**
  * Given a button name and a calculator data object, return an updated
  * calculator data object.
@@ -11,14 +17,7 @@ import operate from "./operate";
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
-export default function calculate(
-	obj: {
-		next?: string | null;
-		operation?: string | null;
-		total?: string | null;
-	},
-	buttonName: string,
-) {
+export default function calculate(obj: Calculator, buttonName: string) {
 	if (buttonName === "AC") {
 		return {
 			total: null,
