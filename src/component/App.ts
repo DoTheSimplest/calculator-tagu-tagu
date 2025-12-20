@@ -5,11 +5,7 @@ import Display from "./Display";
 import "./App.css";
 
 export default function App() {
-	const state = useState({
-		total: null,
-		next: null,
-		operation: null,
-	} as Calculator);
+	const state = useState({} as Calculator);
 
 	const handleClick = (buttonName: string) => {
 		const delta = calculate(state.get(), buttonName);
