@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "devDependencies": {
+    "vitest": "^4.0.16"
   },
-  "dependencies": {
-  },
-  "scripts": {
-  }
+  "scripts": {}
 }
