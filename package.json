@@ -1,16 +1,17 @@
 {
-  "name": "calculator",
-  "version": "0.1.0",
-  "license": "MIT",
-  "devDependencies": {
-    "@biomejs/biome": "2.3.10",
-    "@types/big.js": "^6.2.2",
-    "vite": "^7.3.0",
-    "vitest": "^4.0.16"
-  },
-  "scripts": {},
-  "dependencies": {
-    "big.js": "^7.0.1",
-    "tagu-tagu": "^2.1.1"
-  }
+	"name": "calculator",
+	"version": "0.1.0",
+	"license": "MIT",
+	"type": "module",
+	"devDependencies": {
+		"@biomejs/biome": "2.3.10",
+		"@types/big.js": "^6.2.2",
+		"vite": "^7.3.0",
+		"vitest": "^4.0.16"
+	},
+	"scripts": {},
+	"dependencies": {
+		"big.js": "^7.0.1",
+		"tagu-tagu": "^2.1.1"
+	}
 }
