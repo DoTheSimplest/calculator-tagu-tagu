@@ -5,7 +5,7 @@ export default function operate(
 	numberTwo: string | undefined | null,
 	operation: string,
 ) {
-	const one = Big(numberOne || "0")!;
+	const one = Big(numberOne || "0");
 	const two = Big(
 		numberTwo || (operation === "÷" || operation === "x" ? "1" : "0"),
 	); //If dividing or multiplying, then 1 maintains current value in cases of null
