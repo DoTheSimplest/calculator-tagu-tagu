@@ -12,7 +12,11 @@ import operate from "./operate";
  *   operation:String  +, -, etc.
  */
 export default function calculate(
-	obj: { next?: string; operation?: string; total?: string },
+	obj: {
+		next?: string | null;
+		operation?: string | null;
+		total?: string | null;
+	},
 	buttonName: string,
 ) {
 	if (buttonName === "AC") {
