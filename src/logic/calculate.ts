@@ -17,7 +17,10 @@ export type Calculator = {
  *   next:String       the next number to be operated on with the total
  *   operation:String  +, -, etc.
  */
-export default function calculate(obj: Calculator, buttonName: string) {
+export default function calculate(
+	obj: Calculator,
+	buttonName: string,
+): Calculator {
 	if (buttonName === "AC") {
 		return {
 			total: null,
