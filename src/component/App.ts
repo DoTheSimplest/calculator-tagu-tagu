@@ -12,7 +12,8 @@ export default function App() {
 	} as Calculator);
 
 	const handleClick = (buttonName: string) => {
-		state.set(calculate(state.get(), buttonName));
+		const delta = calculate(state.get(), buttonName);
+		state.set(Object.assign(state.get(), delta));
 	};
 
 	return div({ attr: { class: "component-app" } }, [
