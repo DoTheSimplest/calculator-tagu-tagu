@@ -1,8 +1,8 @@
 import Big from "big.js";
 
 export default function operate(
-	numberOne: string,
-	numberTwo: string,
+	numberOne: string | undefined,
+	numberTwo: string | undefined,
 	operation: string,
 ) {
 	const one = Big(numberOne || "0")!;
