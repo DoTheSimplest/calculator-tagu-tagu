@@ -15,7 +15,7 @@ export default function ButtonPanel(props: {
 			Button({ name: "AC", clickHandler: handleClick }),
 			Button({ name: "+/-", clickHandler: handleClick }),
 			Button({ name: "%", clickHandler: handleClick }),
-			Button({ name: "+", clickHandler: handleClick, orange: true }),
+			Button({ name: "÷", clickHandler: handleClick, orange: true }),
 		]),
 		div([
 			Button({ name: "7", clickHandler: handleClick }),
