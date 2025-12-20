@@ -5,5 +5,8 @@
   "devDependencies": {
     "vitest": "^4.0.16"
   },
-  "scripts": {}
+  "scripts": {},
+  "dependencies": {
+    "big.js": "^7.0.1"
+  }
 }
