@@ -1,10 +1,6 @@
 import calculate from "./calculate";
-import chai from "chai";
+import {expect, describe, it} from "vitest";
 
-// https://github.com/chaijs/chai/issues/469
-chai.config.truncateThreshold = 0;
-
-const expect = chai.expect;
 
 function pressButtons(buttons) {
   const value = {};
