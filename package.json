@@ -4,13 +4,8 @@
   "license": "MIT",
   "homepage": "http://ahfarmer.github.io/calculator",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.17.1"
   },
   "dependencies": {
-    "big.js": "^5.2.2",
-    "github-fork-ribbon-css": "^0.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
