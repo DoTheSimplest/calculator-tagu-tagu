@@ -1,6 +1,8 @@
 import { button, div, useBinding } from "tagu-tagu";
 import "./Button.css";
 
+export const handleButtonClick = "handleButtonClick";
+
 export default function Button(props: {
 	name: string;
 	orange?: boolean;
@@ -16,7 +18,7 @@ export default function Button(props: {
 		button(props.name, {
 			on: {
 				click: useBinding(
-					"handleClick",
+					handleButtonClick,
 					(handleClick) => () => handleClick(props.name),
 				),
 			},

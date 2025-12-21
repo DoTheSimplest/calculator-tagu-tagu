@@ -3,6 +3,7 @@ import calculate, { type Calculator } from "../logic/calculate";
 import ButtonPanel from "./ButtonPanel";
 import Display from "./Display";
 import "./App.css";
+import { handleButtonClick } from "./Button";
 
 export default function App() {
 	const state = useState({} as Calculator);
@@ -12,13 +13,19 @@ export default function App() {
 		state.set(Object.assign(state.get(), delta));
 	};
 
-	return div({ attr: { class: "component-app" }, data: { handleClick } }, [
-		Display({
-			value: useState(
-				[state],
-				() => state.get().next ?? state.get().total ?? "0",
-			),
-		}),
-		ButtonPanel(),
-	]);
+	return div(
+		{
+			attr: { class: "component-app" },
+			data: { [handleButtonClick]: handleClick },
+		},
+		[
+			Display({
+				value: useState(
+					[state],
+					() => state.get().next ?? state.get().total ?? "0",
+				),
+			}),
+			ButtonPanel(),
+		],
+	);
 }
