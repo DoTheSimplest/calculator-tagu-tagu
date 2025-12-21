@@ -30,6 +30,6 @@ Usage
 
 This project includes modified code from the following source:
 
-- **calculator**
+- **calculator** Simple calculator built with React
 
 https://github.com/andrewagain/calculator
