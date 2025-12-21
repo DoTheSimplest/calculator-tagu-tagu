@@ -24,3 +24,12 @@ Usage
 ---
 
 `npm start`
+
+
+## Acknowledgements
+
+This project includes modified code from the following source:
+
+- **calculator**
+
+https://github.com/andrewagain/calculator
