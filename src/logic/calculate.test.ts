@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 import calculate from "./calculate";
 
-function pressButtons(buttons) {
-	const value = {};
+function pressButtons(buttons: string[]) {
+	const value = {} as Record<string, string | null>;
 	for (const button of buttons) {
 		Object.assign(value, calculate(value, button));
 	}
@@ -16,11 +16,18 @@ function pressButtons(buttons) {
 	return value;
 }
 
-function expectButtons(buttons, expectation) {
+function expectButtons(
+	buttons: string[],
+	expectation: Record<string, string | null>,
+) {
 	expect(pressButtons(buttons)).to.deep.equal(expectation);
 }
 
-function test(buttons, expectation, only = false) {
+function test(
+	buttons: string[],
+	expectation: Record<string, string | null>,
+	only = false,
+) {
 	const func = only ? it.only : it;
 	func(`buttons ${buttons.join(",")} -> ${JSON.stringify(expectation)}`, () => {
 		expectButtons(buttons, expectation);
