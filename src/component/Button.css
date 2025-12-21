@@ -26,6 +26,14 @@
 	color: white;
 }
 
+.component-button button:hover {
+	background-color: #c0c0c0;
+}
+
+.component-button.orange button:hover {
+	background-color: #e38132;
+}
+
 .component-button button:active {
 	background-color: #a0a0a0;
 }
