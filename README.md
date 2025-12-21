@@ -9,7 +9,7 @@ Created with *tagu-tagu*. See the [tagu-tagu page](https://github.com/DoTheSimpl
 Try It
 ---
 
-[ahfarmer.github.io/calculator](https://ahfarmer.github.io/calculator/)
+[DoTheSimplest.github.io/calculator-tagu-tagu](https://DoTheSimplest.github.io/calculator-tagu-tagu)
 
 
 
