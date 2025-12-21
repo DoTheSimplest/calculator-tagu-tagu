@@ -11,7 +11,8 @@
 		"vitest": "^4.0.16"
 	},
 	"scripts": {
-		"start": "vite"
+		"start": "vite",
+		"build": "vite build"
 	},
 	"dependencies": {
 		"big.js": "^7.0.1",
