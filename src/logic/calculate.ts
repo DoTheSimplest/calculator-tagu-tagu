@@ -3,11 +3,10 @@ import isNumber from "./isNumber";
 import operate from "./operate";
 
 export type Calculator = {
-	next?: string | null;
-	operation?: string | null;
-	total?: string | null;
+	next: string | null;
+	operation: string | null;
+	total: string | null;
 };
-
 /**
  * Given a button name and a calculator data object, return an updated
  * calculator data object.
@@ -20,7 +19,7 @@ export type Calculator = {
 export default function calculate(
 	obj: Calculator,
 	buttonName: string,
-): Calculator {
+): Partial<Calculator> {
 	if (buttonName === "AC") {
 		return {
 			total: null,

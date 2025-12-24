@@ -6,7 +6,11 @@ import "./App.css";
 import { handleButtonClick } from "./Button";
 
 export default function App() {
-	const state = useState({} as Calculator);
+	const state = useState<Calculator>({
+		next: null,
+		operation: null,
+		total: null
+	});
 
 	const handleClick = (buttonName: string) => {
 		const delta = calculate(state.get(), buttonName);
