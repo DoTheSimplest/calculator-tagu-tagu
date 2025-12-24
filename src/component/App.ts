@@ -21,8 +21,8 @@ export default function App() {
 		[
 			Display({
 				value: useState(
-					[state],
-					() => state.get().next ?? state.get().total ?? "0",
+					state,
+					(calculator) => calculator.next ?? calculator.total ?? "0",
 				),
 			}),
 			ButtonPanel(),
