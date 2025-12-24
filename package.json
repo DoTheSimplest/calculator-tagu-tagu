@@ -12,7 +12,8 @@
 	},
 	"scripts": {
 		"start": "vite",
-		"build": "vite build"
+		"build": "vite build",
+		"test": "vitest"
 	},
 	"dependencies": {
 		"big.js": "^7.0.1",
