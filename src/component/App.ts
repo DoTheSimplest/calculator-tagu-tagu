@@ -1,4 +1,4 @@
-import { div, useState } from "tagu-tagu";
+import { div, useComputed, useState } from "tagu-tagu";
 import calculate, { type Calculator } from "../logic/calculate";
 import ButtonPanel from "./ButtonPanel";
 import Display from "./Display";
@@ -9,7 +9,7 @@ export default function App() {
 	const state = useState<Calculator>({
 		next: null,
 		operation: null,
-		total: null
+		total: null,
 	});
 
 	const handleClick = (buttonName: string) => {
@@ -24,10 +24,7 @@ export default function App() {
 		},
 		[
 			Display({
-				value: useState(
-					state,
-					(calculator) => calculator.next ?? calculator.total ?? "0",
-				),
+				value: useComputed(() => state.get().next ?? state.get().total ?? "0"),
 			}),
 			ButtonPanel(),
 		],
