@@ -1,7 +1,7 @@
-import { button, div, useBinding } from "tagu-tagu";
+import { button, createContext, div, useContext } from "tagu-tagu";
 import "./Button.css";
 
-export const handleButtonClick = "handleButtonClick";
+export const ClickHandlerContext = createContext<(name: string) => void>();
 
 export default function Button(props: {
 	name: string;
@@ -13,14 +13,12 @@ export default function Button(props: {
 		props.orange ? "orange" : "",
 		props.wide ? "wide" : "",
 	];
+	const clickHandler = useContext(ClickHandlerContext);
 
 	return div({ attr: { class: className.join(" ").trim() } }, [
 		button(props.name, {
 			on: {
-				click: useBinding(
-					handleButtonClick,
-					(handleClick) => () => handleClick(props.name),
-				),
+				click: () => clickHandler(props.name),
 			},
 		}),
 	]);

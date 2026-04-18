@@ -3,7 +3,7 @@ import calculate, { type Calculator } from "../logic/calculate";
 import ButtonPanel from "./ButtonPanel";
 import Display from "./Display";
 import "./App.css";
-import { handleButtonClick } from "./Button";
+import { ClickHandlerContext } from "./Button";
 
 export default function App() {
 	const state = useState<Calculator>({
@@ -20,13 +20,12 @@ export default function App() {
 	return div(
 		{
 			attr: { class: "component-app" },
-			data: { [handleButtonClick]: handleClick },
 		},
 		[
 			Display({
 				value: useComputed(() => state.get().next ?? state.get().total ?? "0"),
 			}),
-			ButtonPanel(),
+			ClickHandlerContext(handleClick, ButtonPanel),
 		],
 	);
 }
