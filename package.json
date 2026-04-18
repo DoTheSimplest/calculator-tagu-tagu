@@ -17,6 +17,6 @@
 	},
 	"dependencies": {
 		"big.js": "^7.0.1",
-		"tagu-tagu": "^4.0.2"
+		"tagu-tagu": "^5.0.3"
 	}
 }
